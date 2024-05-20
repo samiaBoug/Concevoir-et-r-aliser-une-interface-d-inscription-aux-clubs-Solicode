@@ -1,0 +1,192 @@
+/* logo et menu */
+header{
+    display: flex;
+}
+header img {
+   
+    width: 200px;
+    height:60px;
+    background-color: rgb(207, 190, 169);
+    
+}
+
+#Menu {
+    margin-top: 50px;
+    margin-left: 1000px;
+    padding: 30px 60px 60px 30px;
+    background-color: rgb(244, 216, 116);
+    border-radius: 20%;
+    position: fixed;
+}
+#Menu li {
+    margin-bottom: 30px;
+    list-style: none;
+}
+#Menu li a {
+    text-decoration: none;
+    color: black;  
+}
+#Menu li a:hover {
+    background-color: rgb(207, 190, 169);
+    color: aliceblue;
+    font-size: larger;
+}
+
+/* acceuil */
+.Titre{
+    color: rgb(55, 134, 52);
+    margin-left: 350px;
+    margin-top: 60px;
+}
+.ligne {
+    height: 6px;
+    background-color: rgb(55, 134, 52);
+    width: 40px;
+    margin-left: 350px;
+    
+}
+span {
+    font-size: 40px;
+    margin-left: 70px;
+    color: rgb(211, 201, 8);
+}
+#pAcceuil {
+    margin-left: 70px;
+    margin-right: 350px;
+}
+figure {
+    margin-top: 90px;
+    margin-right: 250px;
+    display: flex;
+}
+figure img {
+    width: 250px;
+    height: 150px;
+}
+.caption {
+    margin-right: 30px;
+}
+/* Formulaire */
+form {
+    border: solid;
+    border-radius: 0 20% 0 20%;
+    margin : 50px 200px 20px 100px;
+    background-image: url(img/formulaire.png);
+    background-size: cover;
+    background-position: center center;
+
+       
+}
+input {
+    margin-top: 30px;
+    margin-left: 100px;
+    margin-bottom: 40px;
+}
+label {
+    margin-left: 100px; 
+    font-weight: bold;   
+}
+#input{
+    margin-left: 100px;
+        font-weight: bold;
+        margin-top: 50px;
+}
+select{
+margin-top: 30px;
+}
+#buttonAjouter {
+    margin-left: 300px;
+    height: 40px;
+    width: 100px;
+    font-weight: bold;
+    background-color:rgb(55, 134, 52);
+    border: none;
+}
+
+#buttonAnnuler {
+     margin-left: 100px;
+     height: 40px;
+     width: 100px;
+    font-weight: bold;
+    background-color:rgb(211, 201, 8);
+    border: none;
+}
+#buttonAnnuler:hover {
+    height: 45px;
+    width: 103px;
+    border: solid;
+}
+#buttonAjouter:hover {
+    height: 45px;
+    width: 103px;
+    border: solid;
+}
+
+/* Liste de participant */
+table {
+    border: 1px solid;
+    margin: 50px 100px 20px 70px;
+}
+th{
+    border: 1px solid;
+    padding: 17px 50px 17px 50px;
+}
+td {
+    padding-left: 30px;
+    padding-right: 20px;
+    border: solid;
+}
+.alert {
+    color: rgb(240, 22, 22);
+    font-size: smaller;
+    margin-left: 100px;
+    padding-top: -9px;
+}
+/*Statistique*/
+#nbrTotale {
+display: flex;
+margin-left: 70px;
+    margin-top: 50px;
+}
+#répartition{
+    display: flex;
+    gap: 300px;
+    
+}
+#répartition img {
+height: 200px;
+width: 230px;
+}
+h3 {
+    margin-bottom:70px;
+    
+}
+h5 {
+    font-size: 40px;
+    margin-left: 100px;
+    color: rgb(211, 201, 8);
+}
+#RepartitionFiliere{
+    display: flex;
+    gap: 300px;
+    margin-left: 70px;
+}
+#RepartitionFiliere img {
+    height: 200px;
+    width: 230px;
+}
+h6 {
+    color: rgb(207, 190, 169);
+    font-size: large;
+}
+.titreRepartition{
+    margin-left : 70px;
+}
+
+
+
+
+
+
+
+

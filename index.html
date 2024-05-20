@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Brief-4</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!--logo et menu-->
+    <header>
+        <img src="img/logo-solicode.svg" alt="">
+   
+    <ul id="Menu">
+        <li>
+            <a href="#Acceuil">Acceuil</a>
+        </li>
+        <li>
+            <a href="#Formulaire">formulaire de participation</a>
+        </li>
+        <li>
+            <a href="#Liste">Liste de participants</a>
+        </li>
+        <li>
+            <a href="#Statistique">statistiques d'inscription</a>
+        </li>
+        <li>
+            <a href="#Contact">Contact</a>
+        </li>
+    </ul>
+    </header>
+<!--Acceuil-->
+    <section id="Acceuil">
+        <hr>
+        <h1 class="Titre">Acceuil</h1>
+        <hr class="ligne">
+        <span>Rejoignez-Nous</span>
+        <p id="pAcceuil">
+            Les activités parascolaires jouent un rôle primordial dans l'épanouissement des
+            apprenants. En effet, elles permettent de créer des espaces d'échange, de partage
+            et de consolidation de connaissances et des compétences dans différents domaines.
+            Dans ce contexte, Solicode interpelle ses apprenants pour participer dans des clubs
+            appartenant aux centres d'intérêt variés.
+        </p>
+        </section>
+        <figure>
+        
+            
+            <div class="Club"> 
+                <img src="img/Artificialintelligence.png" alt="">
+                <h3>Club IA</h3>
+                <p class="caption">
+                Le club de l'IA est un lieu de rencontre pour les passionnés de l'intelligence artificielle. Rejoignez-nous pour
+            explorer le futur de la technologie et développer des solutions innovantes. 
+                    </p>
+                    </div>
+            <div class="Club">
+                <img src="img/Sport.png" alt="">
+                <h3>Club Sport</h3>
+                 <p class="caption">Notre club de hackathon est un laboratoire d'idées où la créativité et la technologie se rejoignent. Participez à nos
+            défis et transformez vos idées en réalité en un temps record.
+            </p>
+            </div>
+            <div class="Club">
+                <img src="img/Hackathon.png" alt="">
+                <h3>Club Hackathon</h3>
+                <p class="caption">Rejoignez notre club de sport pour rester actif, en forme, et faire partie d'une communauté enthousiaste. Du football au
+            yoga, nous avons quelque chose pour tout le monde. 
+            </p>
+            </div>
+            
+            </figure>
+    <!--Formulaire-->
+     <section id="Formulaire">
+            <h1 class="Titre">Formulaire de participation</h1>
+            <hr class="ligne">
+            <form id="formulaire">
+               <label for="Nom">Nom :</label> 
+               <input type="text" id="Nom" ><br>
+               <label for="Prénom">Prénom :</label>
+               <input type="text" id="Prénom" ><br>
+               <label for="Email">E-mail :</label>
+               <input type="email" id="Email" onblur="validerEmail()"><br>
+               <p id="alertEmail" class="alert"></p>
+               <label for="Genre">Genre :</label>
+               <input type="radio" id="Genre" name="Genre" value="Femme">Femme
+               <input type="radio" name="Genre" value="Homme">Homme <br>
+               <label for="Filière">Filière :</label>
+               <select id="Filière" onchange="Changer()">
+                <option value="Choisie Filière">Choisie Filière</option>
+                <option value="Dev Web">Dev Web</option>
+                <option value="Dev Mobile">Dev Mobile</option>
+               </select> <br>
+               
+               <label for="groupe">Groupe :</label>
+               <select name="groupe" id="groupe">
+                
+               </select>
+               <p id="input">Clubs :</p> <br>
+               <input type="checkbox" id="Club IA" value="Club IA">
+               <label for="Club IA">Club IA </label> <br>
+               <input type="checkbox" id="Club Sport" value="Club Sport">
+               <label for="Club Sport">Club Sport </label><br>
+               <input type="checkbox" id="Club Hackathon" value="Club Hackathon" >
+               <label for="Club Hackathon">Club Hackathon</label> <br>
+               <p id="Capacité" class="alert"></p>
+               <p id="alertFiliere" class="alert"></p>
+               <input type="button" id="buttonAjouter" class="botton" value="Ajouter" onclick="Inscrire()">
+               <input type="button" id="buttonAnnuler" class="botton" value="Annuler" onclick="réinitialiser()">
+                
+            </form>
+            <p id="alertForm" class="alert"></p>
+        </section> 
+    <section id="Liste">
+        <h1 class="Titre">Liste de participants</h1>
+        <hr class="ligne">
+        <table>
+            <tr>
+                <th>Nom</th>
+                <th>Prenom</th>
+                <th>Email</th>
+                <th>Genre</th>
+                <th>Filière</th>
+                <th>Groupe</th>
+                <th>Clubs</th>
+            </tr>
+
+           
+        </table>
+
+    </section>
+    <section id="Statistique">
+        <h1 class="Titre">Statistique d'inscription</h1>
+        <hr class="ligne">
+        <div id="nbrTotale">
+           <h3>Les nombres totale des inscrits :</h3>
+           <span id="nbretotale">0</span>
+        </div>
+        <h3 class="titreRepartition">La répartition des inscriptions par genre :</h3>
+        <div id="répartition">
+         <div>
+            <img src="img/femme.png" alt="">
+            <h5 id="nbreFemme">0</h5>
+         </div>
+         <div>
+            <img src="img/homme.png" alt="">
+            <h5 id="nbreHomme">0</h5>
+         </div>
+        </div>
+        <div>
+            <h3 class="titreRepartition">La répartition des inscriptions par filière :</h3>
+            <div id="RepartitionFiliere">
+                <div>
+                <img src="img/Dev mobile.png" alt="">
+                <h6>Devellepement Mobile</h6>
+                <h5 id="nbreMobile">0</h5>
+                </div>
+            
+            <div>
+                <img src="img/Dev Web.png" alt="">
+                <h6>Devellepement Web</h6>
+                <h5 id="nbreWeb">0</h5>
+            </div>
+        </div>
+        
+    
+    </section>
+ 
+<script src="scripte.js"></script>
+</body>
+</html>
